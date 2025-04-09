@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -13,65 +13,19 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        $desc = 'Example';
-        $img = 'assets/users/image/featured/';
-        $products = [
-            [
-                'name' => 'Sakamoto Days',
-                'img' => $img.'Sakamoto.jpg',
-                'price' => 200000,
-                'inventory' => 10,
-                'description' => $desc,
-                'short_description' => 'Book Store là một hệ thống bán sách đa dạng thể loại. Các bạn hãy đến với cửa hàng của chúng tôi để có thể tìm được những cuốn sách mà bạn yêu thích.',
-                'facebook' => 'https://www.facebook.com/',
-                'linkedin' => 'https://www.linkedin.com/',
-                'category_id' => 1,
-            ],
-            [
-                'name' => 'Di Chúc Của Bác Hồ',
-                'img' => $img.'dichuccuabacho.jpg',
-                'price' => 250000,
-                'inventory' => 10,
-                'description' => $desc,
-                'short_description' => 'Book Store là một hệ thống bán sách đa dạng thể loại. Các bạn hãy đến với cửa hàng của chúng tôi để có thể tìm được những cuốn sách mà bạn yêu thích.',
-                'facebook' => 'https://www.facebook.com/',
-                'linkedin' => 'https://www.linkedin.com/',
-                'category_id' => 2,
-            ],
-            [
-                'name' => 'Kẻ Trộm Sách',
-                'img' => $img.'ketromsach.jpg',
-                'price' => 230000,
-                'inventory' => 10,
-                'description' => $desc,
-                'short_description' => 'Book Store là một hệ thống bán sách đa dạng thể loại. Các bạn hãy đến với cửa hàng của chúng tôi để có thể tìm được những cuốn sách mà bạn yêu thích.',
-                'facebook' => 'https://www.facebook.com/',
-                'linkedin' => 'https://www.linkedin.com/',
-                'category_id' => 3,
-            ],
-            [
-                'name' => 'Attack On Titan',
-                'img' => $img.'Atackontitan.jpg',
-                'price' => 200000,
-                'inventory' => 10,
-                'description' => $desc,
-                'short_description' => 'Book Store là một hệ thống bán sách đa dạng thể loại. Các bạn hãy đến với cửa hàng của chúng tôi để có thể tìm được những cuốn sách mà bạn yêu thích.',
-                'facebook' => 'https://www.facebook.com/',
-                'linkedin' => 'https://www.linkedin.com/',
-                'category_id' => 1,
-            ],
-            [
-                'name' => 'Nicola Testla',
-                'img' => $img,
-                'price' => 280000,
-                'inventory' => 10,
-                'description' => $desc,
-                'short_description' => 'Book Store là một hệ thống bán sách đa dạng thể loại. Các bạn hãy đến với cửa hàng của chúng tôi để có thể tìm được những cuốn sách mà bạn yêu thích.',
-                'facebook' => 'https://www.facebook.com/',
-                'linkedin' => 'https://www.linkedin.com/',
-                'category_id' => 3,
-            ],
+          $img = '/assets/users/images/featured/feature-';
         
+          $products = [
+            [
+                'name'=> 'Thịt bò nạt',
+                'img'=> $img . '1.jpg',
+                'price'=> 200000,
+                'inventory'=> 20,
+                'sort_description'=> 'SiVi SHOP là một trong những hệ thống cửa hàng hoa quả nhập khẩu ở Đà Nẵng cung cấp cho quý khách những trái dưa lưới Egardentươi ngon nhất cũng như các loại hoa quả nhập khẩu, hoa quả vùng miền khác.',
+                'facebook'=> '123',
+                'linkedin'=> '123',
+                'category_id' => 1
+            ]
         ];
 
         DB::table('products')->insert($products);
