@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
@@ -14,9 +14,9 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            "Truyện Trang",
-            "Lịch Sử",
+            "Truyện Tranh",
             "Tiểu Thuyết",
+            "Lịch Sử",
         ];
 
         foreach ($categories as $category) {
