@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Mail\OrderConfirmationMail;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -32,9 +34,9 @@ class OrderController extends Controller
                 'quantity' => $product['quantity'],
             ]);
         }
-
+        
         $order->load('details');
-
+        Mail::to($request->email)->send(new OrderConfirmationMail($order));
         return response()->json(['data' => $order], 201);
     }
     public function getOrderDetails($id)
